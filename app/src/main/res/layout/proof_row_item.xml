@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="340dp"
+    android:layout_height="140dp"
+    android:background="@drawable/proof_row_item_layout"
+    android:layout_gravity="center_horizontal">
+
+
+    <ImageView
+        android:id="@+id/proof_sent"
+        android:layout_width="106dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close" />
+
+    <ImageView
+        android:id="@+id/witness_img"
+        android:layout_width="31dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toEndOf="@+id/proof_time"
+        app:layout_constraintTop_toBottomOf="@+id/proof_location_city"
+        app:srcCompat="@drawable/ic_close" />
+
+    <TextView
+        android:id="@+id/proof_sent_text"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="top"
+        android:text="Not stored in server"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/proof_location_city"
+        app:layout_constraintTop_toBottomOf="@+id/proof_sent" />
+
+    <TextView
+        android:id="@+id/witness_status"
+        android:layout_width="171dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="11dp"
+        android:gravity="center_vertical"
+        android:text="Presence not verified"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/witness_img"
+        app:layout_constraintTop_toBottomOf="@+id/proof_location_city" />
+
+    <TextView
+        android:id="@+id/proof_time"
+        android:layout_width="110dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center_vertical"
+        android:text="14:00"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proof_location_city" />
+
+    <TextView
+        android:id="@+id/proof_location_street"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:autoSizeMaxTextSize="24sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center_vertical"
+        android:text="Rua José Manuel ughuthguthuthguthutghuugth"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/proof_location_city"
+        android:layout_width="225dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center_vertical"
+        android:text="Lisboa"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proof_location_street" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

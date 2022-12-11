@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package sureThing;
+
+option java_package = "com.surething.proto";
+option java_outer_classname = "SureThingEntities";
+
+
+/*******************************************/
+/* Definition for the SureThing data types */
+/*                                         */
+/*           Feel free to change           */
+/*******************************************/
+
+
+message LocationProofProto {
+	int64 id = 1;
+	string geolocation = 2;
+	int64 proverId = 3;
+	int64 verifierId = 4;
+	/* future enum once we have defined the CAs */
+	int64 ca = 5;
+	int64 timestamp = 6;
+	string evidence = 7;
+}
+
+message Log {
+	fixed32 id = 1;
+	repeated LocationProofProto locationProof = 2;
+}
+
+message SLPT {
+	LocationProofProto locationProof = 1;
+	int64 timestamp = 2;
+	bytes signature = 3;
+}
+
+message Signature {
+	LocationProofProto locationProof = 1;
+	SLPT slpt = 2;
+}
+
+message UserSureThingProto {
+	int64 id = 1;
+	string username = 2;
+	string password = 3;
+	string token = 4;
+}

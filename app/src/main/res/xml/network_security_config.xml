@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config>
+        <trust-anchors>
+            <certificates src="@certs/verifier.cer"/>
+            <certificates src="@certs/ledger.cer"/>
+        </trust-anchors>
+    </base-config>
+</network-security-config>
